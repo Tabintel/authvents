@@ -38,7 +38,7 @@
     try {
       const userInfo = await faceio.authenticate({
         locale: "auto",
-        token: "fioaf212",
+        token: process.env.PUBLIC_FACEIO_PUBLIC_ID,
       });
       localStorage.setItem("isAuthenticated", JSON.stringify("true"));
       localStorage.setItem("userInfo", JSON.stringify(userInfo));
